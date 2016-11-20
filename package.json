@@ -1,0 +1,31 @@
+{
+  "name": "@blackdice/actions",
+  "version": "0.1.0",
+  "description": "Container for emitting composable actions",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-preset-latest-minimal": "^1.1.2",
+    "babel-register": "^6.18.0",
+    "eslint": "^3.10.2",
+    "eslint-config-blackdice": "^0.1.1"
+  },
+  "scripts": {
+    "test": "ava",
+    "start": "ava --watch",
+    "lint": "eslint src test",
+    "lintFix": "npm run lint -- --fix",
+    "ci": "npm run lint && npm test"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit",
+    "source": "src",
+    "files": [
+      "test/*.js"
+    ]
+  }
+}
